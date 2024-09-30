@@ -12,6 +12,17 @@ public abstract class Character {
 
     public abstract void kick (Character c);
 
+    public void setHp (int newHP){
+        if (newHP >= 0){
+            hp = newHP;
+        } else {
+            hp += newHP;
+        }
+        if (hp < 0){
+            hp = 0;
+        }
+    }
+
     public boolean isAlive (){
         return (hp > 0);
     }
